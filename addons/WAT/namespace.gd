@@ -1,5 +1,8 @@
+tool
 extends Reference
 class_name WAT
 
-const Test = preload("res://addons/WAT/core/test/test.gd")
-const TestSuiteOfSuites = preload("res://addons/WAT/core/test/suite.gd")
+
+const COMPLETED: String = "completed"
+const Test: Script = preload("res://addons/WAT/test/test.gd")
+const TestRunnerScene: PackedScene = preload("res://addons/WAT/runner/TestRunner.tscn")
