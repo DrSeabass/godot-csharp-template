@@ -8,6 +8,7 @@
 
 config_version=4
 
+RunInEngine=true
 _global_script_classes=[ {
 "base": "Reference",
 "class": "WAT",
@@ -17,13 +18,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "WATTest",
 "language": "GDScript",
-"path": "res://addons/WAT/core/test/test.gd"
+"path": "res://addons/WAT/test/test.gd"
 } ]
 _global_script_class_icons={
 "WAT": "",
 "WATTest": ""
 }
-RunInEngine=true
 
 [WAT]
 
@@ -31,19 +31,22 @@ Test_Directory="res://tests"
 Results_Directory="res://tests/results/WAT"
 Minimize_Window_When_Running_Tests=false
 TestStrategy={
-"repeat": 1,
-"strategy": "RunAll"
 }
 Tags=PoolStringArray(  )
 Display=8
+Test_Metadata_Directory="res://"
+Cache_Tests=true
+Window_Size=Vector2( 1280, 720 )
+Port=6008
 
 [application]
 
 config/name="CSharpWithTestingTemplate"
+run/main_scene="res://HelloWorld.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "WAT" )
+enabled=PoolStringArray( "res://addons/WAT/plugin.cfg" )
 
 [rendering]
 
